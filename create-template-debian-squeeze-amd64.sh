@@ -6,7 +6,7 @@ TMPIP="192.168.20.1"
 TMPCT="123456"
 VZROOT="/var/lib/vz/private"
 
-set -e
+set -x
 
 echo "cleaning the CT $TMPCT"
 vzctl stop $TMPCT
