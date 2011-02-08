@@ -39,7 +39,7 @@ echo "Set a temporary IP address $TMPIP"
 vzctl set $CTID --ipadd $TMPIP --save
 
 echo "Set the OpenDNS server"
-vzctl set $CTID --nameserver 208.67.222.222 --nameserver 208.67.220.220 --searchdomain ch3rry.be --save
+vzctl set $CTID --nameserver 208.67.222.222 --nameserver 208.67.220.220 --save
 
 echo "Creating /dev/ptmx"
 mknod --mode $CTID $VZROOT/$CTID/dev/ptmx c 5 2
