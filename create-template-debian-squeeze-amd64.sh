@@ -45,7 +45,7 @@ echo "Creating /dev/ptmx"
 mknod --mode $CTID $VZROOT/$CTID/dev/ptmx c 5 2
 
 echo "Copying the sysctl.conf"
-cp -v sysctl.conf $VZROOT/$CTID/etc/sysctl.conf
+cp -v /etc/sysctl.conf $VZROOT/$CTID/etc/sysctl.conf
 
 echo "Starting the CT $CTID"
 vzctl start 999
