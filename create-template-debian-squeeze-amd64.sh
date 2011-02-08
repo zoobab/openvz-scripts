@@ -55,7 +55,7 @@ echo "Changing the PATH"
 vzctl exec $CTID "export PATH=/sbin:/usr/sbin:/bin:/usr/bin"
 
 echo "Changing the sources.list to add non-free"
-vzctl exec $CTID "echo \"deb http://ftp.de.debian.org/debian squeeze main non-free\" > /etc/apt/sources.list"
+vzctl exec $CTID "echo \"deb http://ftp.de.debian.org/debian squeeze main non-free\ndeb http://ftp.de.debian.org/debian-security squeeze/updates main non-free contrib\" > /etc/apt/sources.list"
 vzctl exec $CTID cat /etc/apt/sources.list
 
 echo "apt-get update"
